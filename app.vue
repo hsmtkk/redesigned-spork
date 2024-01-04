@@ -1,5 +1,6 @@
 <template>
-  <div>
-    <NuxtWelcome />
-  </div>
+  <Head>
+    <title>kouhai-portfolio</title>
+  </Head>
+  <NuxtPage />
 </template>
