@@ -44,6 +44,8 @@ const tableName = "recipe"
 const submit = () => {
     const { name, items, howToCook } = form.value
     if (!name || !howToCook || !items.some((item) => !item.name || !Number.isFinite(item.amount) || !item.unit)) {
+        console.log("form.value")
+        console.log(form.value)
         alert("いずれかのフォームが空白です")
         return
     }
