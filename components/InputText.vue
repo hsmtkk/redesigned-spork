@@ -1,9 +1,5 @@
 <script setup lang="ts">
-interface Props {
-    modelValue: string
-}
-
-defineProps<Props>()
+const props = defineProps<{ modelValue: string }>()
 
 const emits = defineEmits<{
     (e: "update:modelValue", value: string): void
@@ -11,5 +7,5 @@ const emits = defineEmits<{
 </script>
 
 <template>
-    <input v-model="modelValue" type="text" class="w-full rounded-lg border-2 p-2 dark:bg-coffee" />
+    <input v-model="props.modelValue" type="text" class="w-full rounded-lg border-2 p-2 dark:bg-coffee" />
 </template>
