@@ -9,4 +9,14 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  nitro: {
+    preset: "aws-lambda",
+  },
+  typescript: {
+    strict: true,
+  },
+  runtimeConfig: {
+    referer: process.env.REFERER,
+    isDev: process.env.NODE_ENV === "development",
+  },
 })
